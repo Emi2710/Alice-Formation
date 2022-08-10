@@ -71,6 +71,19 @@ export default {
                 maxLength: 90,
             },
             group: 'principal'
-        }
+        },
+        {
+            name: 'tags',
+            title: 'Tags',
+            type: 'array',
+            of: [
+                {
+                    name: 'tag',
+                    title: 'Tag',
+                    type: 'string'
+                }
+            ],
+            group: 'principal'
+        },
     ]
 }
