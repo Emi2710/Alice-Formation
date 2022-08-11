@@ -7,7 +7,7 @@ import article from '../sanity/schemas/article';
 const Article = ({ article: { slug, image1, tag, lecture, titre} }) => {
   return (
     <div>
-        <Link href={`/article/${slug.current}`}>
+        <Link href={`/formation/${slug.current}`}>
             <div>
               <img 
                 src={urlFor(image1)}
