@@ -1,17 +1,19 @@
 import React from 'react';
+import styles from '../styles/Formation.module.css';
 
 import { client } from '../lib/client';
-import { Article, HeroBanner } from '../components';
+import { Article, HeroBanner, Navbar } from '../components';
 
 const Formation = ({ articles, bannerData }) => {
   return (
-    <>
+    <div>
+    <Navbar />
     <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
 
-    <div>
+    <div className={styles.formation__wrapper}>
       {articles?.map((article) => <Article key={article._id} article={article} />)}
     </div>
-    </>
+    </div>
   )
 }
 

@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Roboto:wght@400;500&display=swap');
 :root {
   --title-font: 'Playfair Display', serif;
   --background-color: #F3EAD3;
   --tag-color: #41383A;
   --button-color: #E29578;
   --white: #fff;
+  --black: #000;
 
 }
 
@@ -14,6 +14,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--black);
 }
 
 a {
@@ -23,18 +25,97 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 .bold-title {
-  font-weight: bold;
+  font-family: var(--title-font);
+  font-weight: 600;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .medium-title {
-  font-weight: medium;
+  font-family: var(--title-font);
 }
 
 .medium-italic-title {
+  font-family: var(--title-font);
   font-weight: medium;
   font-style: italic;
 }
+
+@media screen and (min-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/*
+  Navbar styling below
+*/
+
+.app__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app__navbar button {
+  margin-right: 3rem;
+  background: none;
+  padding: 0.6rem;
+  width: 125px;
+  border: 2px solid var(--button-color);
+  border-radius: 18px;
+  color: var(--button-color);
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.app__navbar button:hover {
+  cursor: pointer;
+}
+
+.app__navbar ul {
+  display: flex;
+  list-style: none;
+  padding-top: 1rem;
+}
+
+.app__navbar li {
+  display: flex;
+  margin-right: 4rem;
+}
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 3rem;
+}
+
+.app__navbar-logo:hover, .app__navbar-links:hover {
+  cursor: pointer;
+}
+
+.app__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 

@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+
+import { Navbar } from '../components';
 
 const apropos = () => {
   return (
-    <div></div>
+    <div>
+      <Navbar />
+      a propos
+    </div>
   )
 }
 

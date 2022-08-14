@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Navbar } from '../components';
+
 
 const parcours = () => {
   return (
-    <div>parcours</div>
+    <div>
+      <Navbar />
+      Parcours
+    </div>
   )
 }
 

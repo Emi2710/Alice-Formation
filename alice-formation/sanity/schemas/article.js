@@ -63,6 +63,13 @@ export default {
         {name: 'img6', title: 'Image de la section ', type: 'image', group: 'section6'},
 
         {
+            name: 'preview',
+            title: 'Preview',
+            type: 'string',
+            group: 'principal'
+        },
+
+        {
             name: 'slug',
             title: 'Slug',
             type: 'slug',
