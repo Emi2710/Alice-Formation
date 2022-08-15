@@ -1,24 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 import { urlFor } from '../lib/client';
 
 const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) => {
+
   return (
-    <div>
+    <div className='article-bordel'>
+        
         <Link href={`/formation/${slug.current}`}>
-            <div>
+            
+              
               <div className='formation-article-wrapper'>
 
                 <div className='formation-article-img'>
                   <img 
                     src={urlFor(image1)}
-                    width={250}
-                    height={175}
                   />
                 </div>
 
-                <div>
+                <div className='formation-article'>
                   <div className='display-flex'>
                     <p className='tag'>{tags}</p>
                     <p className='lecture'>{lecture}</p>
@@ -34,24 +35,34 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
 
               </div>
             
-            </div>
+            
         </Link>
 
         <style jsx>{`
 
-          .formation-article-img {
+          .article-bordel {
+            max-width: 600px;
+          }
+
+          .formation-article-img img {
+            width: 40vw;
+            max-width: 300px;
+            border-radius: 15px;
             padding: 0.5rem;
+            height: 220px;
+          }
+
+          .formation-article {
+            margin-left: 1rem;
           }
           
           .formation-article-wrapper {
             display: flex;
             align-items: center;
+            margin-bottom:2rem;
+            
           }
-
-          .formation-article-wrapper img {
-            border-radius: 15px;
-            padding: 0.5rem;
-          }
+          
 
           .display-flex {
             display: flex;
@@ -60,7 +71,7 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
 
           .tag {
             margin-right: 1rem;
-            padding: 0.3rem;
+            padding: 0.3rem 0.8rem;
             background: var(--tag-color);
             color: var(--white);
             font-size: 14px;
@@ -76,6 +87,8 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
           .formation-article-container p {
             max-width: 420px;
           }
+
+          
 
         
         `}</style>
