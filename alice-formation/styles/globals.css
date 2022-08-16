@@ -37,11 +37,12 @@ a {
 
 .medium-title {
   font-family: var(--title-font);
+  font-weight: 500;
 }
 
 .medium-italic-title {
   font-family: var(--title-font);
-  font-weight: medium;
+  font-weight: 500;
   font-style: italic;
 }
 
@@ -192,5 +193,71 @@ a {
 }
 
 
+/*
+
+FORMATION STYLING HERE
+
+*/
+
+@media screen and (min-width: 225px) {
+  .apropos-wrapper {
+    padding-left: 3rem;
+    margin-top: 5rem;
+  
+  }
+  
+  
+  .heading hr {
+    margin-top: 2rem;
+    margin-right: 5rem;
+  }
+  
+  .heading h1 {
+    width: 70vw;
+  }
+  
+  .content p {
+    margin-top: 2.5rem;
+    opacity: 80%;
+    padding-right: 3rem;
+  }
+  
+  .content {
+    margin-top: 3.5rem;
+  }
+  
+  .apropos-subtitle {
+    opacity: 50%;
+  }
+  
+  .signature-img {
+    margin-top: 4rem;
+  }
+  
+  .apropos-img img {
+    display:none;
+  }
+}
+@media screen and (min-width: 700px) {
+  
+  .display-flex2 {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  
+  .heading h1 {
+    width: 50vw;
+  }
+  
+  
+  .apropos-img img {
+    display: block;
+    width: 45vw;
+    padding: 4.5rem 3rem;
+    border-radius: 20px;
+    max-height: 800px;
+  }
+}
 
 

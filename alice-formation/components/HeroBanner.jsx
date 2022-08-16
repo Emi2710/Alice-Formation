@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const HeroBanner = ({ heroBanner, styles }) => {
   
+  
+  const handleFilter = () => {
+      
+  }
+
   
   
   return (
