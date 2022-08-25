@@ -1,8 +1,5 @@
-@media screen and (min-width: 1000px){
-    .formation__wrapper {
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        
-    }
+.formation__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
 }

@@ -49,110 +49,11 @@ a {
   body {
     font-size: 14px;
   }
-
-  .app__navbar {
-    padding: 1rem;
-  }
-
-  
-
-  .app__navbar button {
-    background: none;
-    padding: 0.6rem;
-    border: 2px solid var(--button-color);
-    border-radius: 18px;
-    color: var(--button-color);
-    font-weight: 600;
-  }
-
-  .menu__hamburger:hover {
-    cursor: pointer;
-  }
-
-  .app__navbar-smallscreen_overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: var(--background-color);
-    transition: .5s ease;
-    z-index: 5;
-    text-align: center;
-
-    flex-direction: column;
-  }
-  
-  .app__navbar-smallscreen_overlay .overlay__close {
-    font-size: 27px;
-    cursor: pointer;
-  
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  
-  
-  .app__navbar-smallscreen_links ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    text-align: center;
-    padding-inline-start: 0;
-  }
-  .app__navbar-smallscreen_links li {
-    cursor: pointer;
-    text-align: center;
-    margin-top: 2rem;
-
-    font-family: var(--title-font);
-  }
-  
-  
-  .app__navbar-links {
-    display: none;
-  }
 }
 
-@media screen and (min-width: 915px) {
+@media screen and (min-width: 700px) {
   body {
     font-size: 16px;
-  }
-
-  .app__navbar-smallscreen {
-    display: none;
-  }
-
-  .app__navbar-links {
-    display: block;
-  }
-
-  .app__navbar ul {
-    display: flex;
-    list-style: none;
-    padding-top: 1rem;
-  }
-  
-  .app__navbar li {
-    display: flex;
-    margin-right: 4rem;
-  }
-
-  .app__navbar-links {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .app__navbar button {
-    background: none;
-    padding: 0.6rem;
-    border: 2px solid var(--button-color);
-    border-radius: 18px;
-    color: var(--button-color);
-    font-weight: bold;
-    margin-top: 1rem;
   }
 }
 
@@ -172,13 +73,32 @@ a {
   justify-content: space-between;
 }
 
-
+.app__navbar button {
+  margin-right: 3rem;
+  background: none;
+  padding: 0.6rem;
+  width: 125px;
+  border: 2px solid var(--button-color);
+  border-radius: 18px;
+  color: var(--button-color);
+  font-weight: bold;
+  margin-top: 1rem;
+}
 
 .app__navbar button:hover {
   cursor: pointer;
 }
 
+.app__navbar ul {
+  display: flex;
+  list-style: none;
+  padding-top: 1rem;
+}
 
+.app__navbar li {
+  display: flex;
+  margin-right: 4rem;
+}
 
 .app__navbar-logo {
   display: flex;
@@ -191,6 +111,11 @@ a {
   cursor: pointer;
 }
 
-
+.app__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 

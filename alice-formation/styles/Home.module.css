@@ -1,16 +1,18 @@
-
-.accueil__container {
-    padding: 1rem;
-    margin-top: 2rem;
+.accueil__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .accueil__img img {
-    height: 50vh;
-    margin-left: 20vw;;
+    max-height: 70vh;
+    width: 40vw;
+    margin-top: 27%;;
 }
 
-
-
+.accueil__container {
+    max-width: 500px;
+}
 
 .accueil__container button {
     background: var(--button-color);
@@ -22,34 +24,4 @@
     font-weight: bold;
     letter-spacing: 0.5px;
     margin-top: 1.5rem;
-}
-
-@media screen and (min-width: 700px){
-    .accueil__wrap {
-        display: flex;
-    }
-
-    .accueil__img img {
-        height: 60vh;
-        margin: 40vh 2rem 0 0;
-    }
-}
-
-@media screen and (min-width: 900px) {
-    .accueil__wrap {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .accueil__img img {
-        max-height: 70vh;
-        width: 40vw;
-        margin-top: 30%;
-        
-    }
-    
-    .accueil__container {
-        max-width: 500px;
-    }
 }
