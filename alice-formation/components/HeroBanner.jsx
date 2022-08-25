@@ -1,6 +1,12 @@
 import React from 'react'
 
 const HeroBanner = ({ heroBanner, styles }) => {
+<<<<<<< HEAD
+=======
+  
+  
+  
+>>>>>>> parent of e2c23e6 (updated 'a propos' page)
   return (
     <div className='formation__banner'>
         <div>

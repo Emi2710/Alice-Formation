@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 .formation__wrapper {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+=======
+@media screen and (min-width: 1000px){
+    .formation__wrapper {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+>>>>>>> parent of e2c23e6 (updated 'a propos' page)
 }
