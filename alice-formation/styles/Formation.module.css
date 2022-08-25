@@ -1,9 +1,11 @@
-<<<<<<< HEAD
+
 .formation__wrapper {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-=======
+
+}
+
 @media screen and (min-width: 1000px){
     .formation__wrapper {
         display:flex;
@@ -11,8 +13,4 @@
         justify-content: space-around;
         
     }
-<<<<<<< HEAD
->>>>>>> parent of e2c23e6 (updated 'a propos' page)
-=======
->>>>>>> parent of e2c23e6 (updated 'a propos' page)
 }
