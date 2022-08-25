@@ -13,8 +13,10 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
               
               <div className='formation-article-wrapper'>
 
-                <div className='formation-article-img' style={{backgroundImage: `url(${urlFor(image1)})`}}>
-                  
+                <div className='formation-article-img'>
+                  <img 
+                    src={urlFor(image1)}
+                  />
                 </div>
 
                 <div className='formation-article'>
@@ -42,15 +44,12 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
             max-width: 600px;
           }
 
-          .formation-article-img {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 330px;
-            height: 35vh;
-            max-height: 220px;
-            border-radius: 12px;
-            margin-left: 0.5rem;
+          .formation-article-img img {
+            width: 40vw;
+            max-width: 300px;
+            border-radius: 15px;
+            padding: 0.5rem;
+            height: 220px;
           }
 
           .formation-article {
@@ -60,7 +59,7 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
           .formation-article-wrapper {
             display: flex;
             align-items: center;
-            margin-bottom:3rem;
+            margin-bottom:2rem;
             
           }
           
