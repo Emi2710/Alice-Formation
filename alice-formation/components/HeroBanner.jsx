@@ -1,6 +1,9 @@
 import React from 'react'
 
 const HeroBanner = ({ heroBanner, styles }) => {
+  
+  
+  
   return (
     <div className='formation__banner'>
         <div>
