@@ -6,6 +6,7 @@ import { urlFor } from '../lib/client';
 const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) => {
 
   return (
+
     <div className='article-bordel'>
         
         <Link href={`/formation/${slug.current}`}>
@@ -13,11 +14,7 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
               
               <div className='formation-article-wrapper'>
 
-                <div className='formation-article-img'>
-                  <img 
-                    src={urlFor(image1)}
-                  />
-                </div>
+                <div className='formation-article-img' style={{backgroundImage: `url(${urlFor(image1)})`}}></div>
 
                 <div className='formation-article'>
                   <div className='display-flex'>
@@ -41,17 +38,26 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
         <style jsx>{`
 
           .article-bordel {
-            max-width: 600px;
+            max-width: 625px;
           }
 
+          .formation-article-img {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 35vw;
+            min-width: 200px;
+            height: 35vh;
+            max-height: 200px;
+            border-radius: 12px;
+            margin-left: 0.5rem;
+          }
+          
           .formation-article-img img {
-            width: 40vw;
-            max-width: 300px;
             border-radius: 15px;
             padding: 0.5rem;
             height: 220px;
           }
-
           .formation-article {
             margin-left: 1rem;
           }
@@ -63,32 +69,25 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
             
           }
           
-
           .display-flex {
             display: flex;
-            align-items:center;
+            align-items: center;
           }
-
+          
           .tag {
             margin-right: 1rem;
             padding: 0.3rem 0.8rem;
             background: var(--tag-color);
             color: var(--white);
             font-size: 14px;
+            max-width: 420px;
             border-radius: 12px;
-            
           }
 
           .lecture {
             font-size: 14px;
             opacity: 75%;
           }
-
-          .formation-article-container p {
-            max-width: 420px;
-          }
-
-          
 
         
         `}</style>

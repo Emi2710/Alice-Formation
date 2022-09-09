@@ -11,7 +11,7 @@ const Formation = ({ articles, bannerData }) => {
     <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
 
     <div className={styles.formation__wrapper}>
-      {articles?.map((article) => <Article key={article._id} article={article} />)}
+      {articles?.map((article) => <Article key={article.slug} article={article} />)}
     </div>
     </div>
   )

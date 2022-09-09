@@ -22,8 +22,8 @@
   },
   "parts": [
     {
-      "name": "part:@sanity/base/schema",
-      "path": "./schemas/schema"
+      "name": "part:@sanity/base/documents/schema",
+      "path": "./schemas/documents/schema"
     }
   ]
 }
