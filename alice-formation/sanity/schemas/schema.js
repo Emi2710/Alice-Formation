@@ -9,6 +9,7 @@ import parcours from './documents/parcours';
 
 import bodyPortableText from './objects/bodyPortableText';
 import mainImage from './objects/mainImage';
+import articleContent from './objects/articleContent';
 
 export default createSchema({
   name: 'default',
@@ -19,6 +20,7 @@ export default createSchema({
     aPropos,
     parcours,
     bodyPortableText,
-    mainImage
+    mainImage,
+    articleContent
   ]),
 })
