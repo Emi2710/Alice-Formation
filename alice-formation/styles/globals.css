@@ -348,3 +348,19 @@ FORMATION
   display: flex;
   align-items: center;
 }
+
+
+
+/*formation slug style here*/
+
+.article-wrapper > .article-container > p {
+  margin-top: 25px;
+  opacity: 80%;
+}
+
+.article-container h1, 
+.article-container h2,
+.article-container h3 {
+  font-family: var(--title-font);
+  margin-top: 3rem;
+}

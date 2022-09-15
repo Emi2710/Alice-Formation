@@ -2,13 +2,6 @@ import React from 'react';
 import { Navbar } from '../components';
 import { client, urlFor } from '../lib/client';
 import {PortableText as BasePortableText} from '@portabletext/react';
-import BlockContent from '@sanity/block-content-to-react'
-import sanityClient from '@sanity/client';
-import Img from 'next/image';
-import { useNextSanityImage } from 'next-sanity-image';
-
-
-
 
 
 const parcours = ({parcours}) => {
