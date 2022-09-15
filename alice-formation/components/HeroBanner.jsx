@@ -19,7 +19,9 @@ const HeroBanner = ({ heroBanner, styles }) => {
                   {item}
                 </div>
               ))}
-              </div>
+            </div>
+        
+            
         </div>
 
 
@@ -32,7 +34,6 @@ const HeroBanner = ({ heroBanner, styles }) => {
               align-items: center;
               text-align: center;
               margin-top: 4rem;
-              margin-bottom: 2.5rem;
             }
 
             .formation_banner_subtitle{
@@ -41,19 +42,22 @@ const HeroBanner = ({ heroBanner, styles }) => {
             }
             .display-flex {
               display: flex;
-              justify-content: space-between;
+              flex-wrap: wrap;
+              justify-content: center;
               margin: 1.5rem 0 3.5rem 0;
               
             }
             
+            
+            
             .tag {
-            margin-right: 1rem ;
-            padding: 0.3rem 0 0.3rem 0;
-            background: var(--tag-color);
-            color: var(--white);
-            font-size: 14px;
-            border-radius: 12px;
-            min-width: 120px;
+              margin: 0.5rem 1rem ;
+              padding: 0.3rem 0 0.3rem 0;
+              background: var(--tag-color);
+              color: var(--white);
+              font-size: 14px;
+              border-radius: 12px;
+              min-width: 120px;
           
             }
 

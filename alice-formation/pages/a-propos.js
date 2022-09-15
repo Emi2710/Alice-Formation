@@ -13,6 +13,7 @@ const apropos = ({ aPropos }) => {
           <p className='apropos-subtitle'>QUI SUIS-JE ?</p>
           <h1 className='medium-title'>Je suis là pour vous aider à trouver <span className='medium-italic-title'l>le métier de vos rêves </span></h1>
           <hr />
+          
           <div className='apropos-flex'>
             <div>
               {aPropos.content.map((paragraph, titre) => (
@@ -57,13 +58,12 @@ const apropos = ({ aPropos }) => {
           max-width: 700px;
         }
 
+        
         .signature {
           margin-top: 3rem;
         }
 
-        .apropos-flex {
-          display: flex;
-        }
+
 
 
 
@@ -74,6 +74,7 @@ const apropos = ({ aPropos }) => {
             border-radius: 12px;
             margin-left: 0.5rem;
             width: 100vw;
+            height: auto;
             margin: 3rem;
           }
       `}</style>

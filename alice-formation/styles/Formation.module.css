@@ -2,7 +2,6 @@
 .formation__wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
 
 }
 
@@ -10,7 +9,16 @@
     .formation__wrapper {
         display:flex;
         flex-wrap: wrap;
-        justify-content: space-around;
-        
+        justify-content: space-between;
     }
+
+    .formation__wrapper div {
+        margin: 10px;
+    }
+
+    .formation__wrapper div:hover {
+        cursor: pointer;
+    }
+
+    
 }

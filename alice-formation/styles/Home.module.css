@@ -15,7 +15,7 @@
     border: none;
     border-radius: 18px;
     color: #fff;
-    font-weight: bold;
+    font-weight: 600;
     letter-spacing: 0.5px;
     margin-top: 1.5rem;
 }
@@ -36,6 +36,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .accueil__container button:hover {
+        background-color: #f59978;
     }
 
     .accueil__img img {

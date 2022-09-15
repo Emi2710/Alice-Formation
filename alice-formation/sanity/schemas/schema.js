@@ -7,9 +7,9 @@ import accueil from './documents/accueil';
 import aPropos from './documents/aPropos';
 import parcours from './documents/parcours';
 
-import bodyPortableText from './objects/bodyPortableText';
-import mainImage from './objects/mainImage';
+import blockContent from './objects/blockContent';
 import articleContent from './objects/articleContent';
+import mainImage from './objects/mainImage';
 
 export default createSchema({
   name: 'default',
@@ -19,8 +19,8 @@ export default createSchema({
     accueil,
     aPropos,
     parcours,
-    bodyPortableText,
-    mainImage,
-    articleContent
+    blockContent,
+    articleContent,
+    mainImage
   ]),
 })

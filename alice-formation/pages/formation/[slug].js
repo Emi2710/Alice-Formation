@@ -4,7 +4,18 @@ import { client, urlFor } from '../../lib/client';
 
 const ArticleDetails = ({ articles, article }) => {
 
-    const { titre, date, lecture, image1, preview, sousTitre1, paragraph1, img1, sousTitre2, paragraph2, img2, sousTitre3, paragraph3, img3, sousTitre4, paragraph4, img4, sousTitre5, paragraph5, img5, sousTitre6, paragraph6, img6 } = article;
+    const { titre,
+            date, 
+            lecture, 
+            image1, 
+            preview, 
+            sousTitre1, 
+            paragraph1, 
+            img1, 
+            sousTitre2, 
+            paragraph2, 
+            img2, 
+            sousTitre3, paragraph3, img3, sousTitre4, paragraph4, img4, sousTitre5, paragraph5, img5, sousTitre6, paragraph6, img6 } = article;
 
   return (
     <div>
@@ -43,7 +54,6 @@ export const getStaticProps = async ({ params: { slug }}) => {
   const article = await client.fetch(query);
   const articles = await client.fetch(articlesQuery);
 
-  console.log(article);
 
   return {
     props: { articles, article }

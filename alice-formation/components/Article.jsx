@@ -17,7 +17,7 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
                 <div className='formation-article-img' style={{backgroundImage: `url(${urlFor(image1)})`}}></div>
 
                 <div className='formation-article'>
-                  <div className='display-flex'>
+                  <div className='display-flex' >
                     <p className='tag'>{tags}</p>
                     <p className='lecture'>{lecture}</p>
                   </div>
@@ -37,18 +37,15 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
 
         <style jsx>{`
 
-          .article-bordel {
-            max-width: 625px;
-          }
+          
 
           .formation-article-img {
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            height: 38vh;
             width: 35vw;
             min-width: 200px;
-            height: 35vh;
-            max-height: 200px;
             border-radius: 12px;
             margin-left: 0.5rem;
           }
