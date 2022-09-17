@@ -39,7 +39,7 @@ const Navbar = () => {
         </div>
 
         <div>
-          <button onClick={() => setButtonPopup(true)}>S'inscrire</button>
+          <button onClick={() => setButtonPopup(true)}>E-book</button>
         </div>
 
     </div>
