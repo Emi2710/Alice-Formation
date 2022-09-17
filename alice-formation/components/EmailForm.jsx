@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import InputField from "./InputField"
-import emailjs from 'emailjs-com';
+import emailjs from 'emailjs/browser';
 import { close } from "../assets";
 import Image from 'next/image';
 
