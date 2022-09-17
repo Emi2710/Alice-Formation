@@ -5,7 +5,6 @@ import Head from 'next/head'
 import { client, urlFor } from '../lib/client';
 import { Navbar } from '../components';
 import Link from 'next/link';
-import Image from 'next/image';
 
 
 const Home = ({ accueil }) => {
@@ -41,7 +40,7 @@ const Home = ({ accueil }) => {
               </div> 
             </div>
             <div className={styles.accueil__img}>
-              <Image src={urlFor(accueil.imgUrl)} align='bottom' alt="Image vectorisée Alice" />
+              <img src={urlFor(accueil.imgUrl)} align='bottom' alt="Image vectorisée Alice" />
             </div>  
           </div>
           

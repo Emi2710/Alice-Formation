@@ -8,13 +8,18 @@ import { Article, HeroBanner, Navbar } from '../components';
 const Formation = ({ articles, bannerData }) => {
   return (
     <div>
-    <Head>
-          <title>{bannerData.metaTitle}</title>
+      {bannerData?.map((formation) => (
+        <>
+        <Head>
+          <title>{formation.metaTitle}</title>
             <meta
               name="description"
-              content={bannerData.description} />
-            <meta name="keywords" content={bannerData.tags} />
+              content={formation.description} />
+            <meta name="keywords" content={formation.tags} />
         </Head>
+        </>
+      ))}
+    
     <Navbar />
     <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
 
