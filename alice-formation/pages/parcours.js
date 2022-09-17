@@ -7,7 +7,7 @@ import Head from 'next/head'
 import EmailForm from '../components/EmailForm';
 import { useState, useEffect } from 'react';
 
-const parcours = ({parcours}) => {
+const Parcours = ({parcours}) => {
 
   const [timedPopup, setTimedPopup] = useState(false);
 
@@ -78,4 +78,4 @@ export const getServerSideProps = async () => {
 }
 
 
-export default parcours
+export default Parcours

@@ -7,7 +7,7 @@ import { Navbar } from '../components';
 import EmailForm from '../components/EmailForm';
 import { useState, useEffect } from 'react';
 
-const apropos = ({ aPropos }) => {
+const Apropos = ({ aPropos }) => {
 
   const [timedPopup, setTimedPopup] = useState(false);
 
@@ -120,4 +120,4 @@ export const getServerSideProps = async () => {
 }
 
 
-export default apropos
+export default Apropos

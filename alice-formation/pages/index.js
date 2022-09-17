@@ -7,7 +7,7 @@ import { Navbar } from '../components';
 import Link from 'next/link';
 
 
-const index = ({ accueil }) => {
+const Home = ({ accueil }) => {
   return (
     <>
       
@@ -63,4 +63,4 @@ export const getServerSideProps = async () => {
 }
 
 
-export default index
+export default Home
