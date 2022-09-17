@@ -10,6 +10,10 @@ export default {
         {
             name: 'content',
             title: 'Content',
+        },
+        {
+            name: 'seo',
+            title: 'SEO',
         }
         
     ],
@@ -40,6 +44,31 @@ export default {
             title: 'Content',
             group: 'content',
             type: 'blockContent'
-        }
+        },
+        {
+            name: 'metaTitle',
+            title: 'Titre SEO',
+            type: 'string',
+            group: 'seo',                
+        },
+        {
+            name: 'description',
+            title: 'Description SEO',
+            type: 'string',
+            group: 'seo',                
+        },
+        {
+            name: 'tagsSEO', 
+            title: 'Mot clés SEO', 
+            type: 'array', 
+            group: 'seo',
+            of: [{ 
+                name: 'tag', 
+                title: 'Tag', 
+                type: 'string' 
+            }],
+                
+        },
+        
     ]
 }

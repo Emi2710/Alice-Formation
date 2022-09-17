@@ -2,11 +2,16 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { alice, dropdown } from '../assets';
-
+import EmailForm from './EmailForm';
+import { useState } from 'react';
 
 const Navbar = () => {
+
+  const [buttonPopup, setButtonPopup] = useState(false);
   
   return (
+    <>
+    <EmailForm trigger={buttonPopup} setTrigger={setButtonPopup} />
     <div className='app__navbar'>
         <div className='small-navbar dropdown'>
           <div className='.dropbtn' ><Image src={dropdown} alt='icone de navigation' /></div>
@@ -34,10 +39,13 @@ const Navbar = () => {
         </div>
 
         <div>
-          <button>S'inscrire</button>
+          <button onClick={() => setButtonPopup(true)}>S'inscrire</button>
         </div>
 
     </div>
+      
+    </>
+    
     
   )
 }

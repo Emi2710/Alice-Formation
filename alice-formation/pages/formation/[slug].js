@@ -2,8 +2,19 @@ import React from 'react';
 import { client, urlFor } from '../../lib/client';
 import { Navbar } from '../../components';
 import {PortableText as BasePortableText} from '@portabletext/react';
+import Head from 'next/head'
+
+import EmailForm from '../../components/EmailForm';
+import { useState, useEffect } from 'react';
 
 const ArticleDetails = ({ articles, article }) => {
+  const [timedPopup, setTimedPopup] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimedPopup(true);
+    }, 17000);
+  }, [])
 
     const { titre,
             date, 
@@ -11,11 +22,25 @@ const ArticleDetails = ({ articles, article }) => {
             lecture, 
             image1,
             sommaire, 
-            contentBody } = article;
+            contentBody,
+            metaTitle,
+            description,
+            tagsSeo,
+           } = article;
 
   return (
+    <>
+    <Head>
+          <title>{metaTitle}</title>
+            <meta
+              name="description"
+              content={description} />
+            <meta name="keywords" content={tagsSeo} />
+        </Head>
+    <EmailForm trigger={timedPopup} setTrigger={setTimedPopup} />
+    <Navbar />
     <div className='article-wrapper'>
-      <Navbar />
+      
       <div className='article-heading'>
         <div className='article-heading-content'>
           <p className='date'>{date}</p>
@@ -30,7 +55,12 @@ const ArticleDetails = ({ articles, article }) => {
       </div>
       
       <div className='sommaire'>
-        <p>{sommaire}</p>
+        {sommaire?.map((sommaireTitle) => (
+          <>
+            <p>{sommaireTitle}</p>  
+          </>
+        ))}
+        
         
       </div>
       <div className='article-container'>
@@ -87,15 +117,40 @@ const ArticleDetails = ({ articles, article }) => {
           .article-container {
             padding: 15px;
             width: 80%;
-            margin: 3rem auto 3rem auto;
+            margin: 1rem auto 3rem auto;
           }
 
           .article-container img {
             margin-top: 25px;
           }
+
+
+          .sommaire {
+            margin: 3rem auto 0 auto;
+            width: 76%;
+            opacity: 50%;
+          }
+
+          .sommaire p {
+            margin-bottom: 8px;
+            position: relative;
+          }
+
+          .sommaire p::before {
+            position: absolute;
+            left: -28px;
+            bottom: 10px;
+            margin: auto;
+            width: 2%;
+            content: '';
+            background: rgba(22, 22, 22, 0.5);
+            height: 2px;
+          }
         
         `}</style>
     </div>
+    </>
+    
   )
 }
 

@@ -2,15 +2,35 @@ import React from 'react';
 import { Navbar } from '../components';
 import { client, urlFor } from '../lib/client';
 import {PortableText as BasePortableText} from '@portabletext/react';
+import Head from 'next/head'
 
+import EmailForm from '../components/EmailForm';
+import { useState, useEffect } from 'react';
 
 const parcours = ({parcours}) => {
 
+  const [timedPopup, setTimedPopup] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimedPopup(true);
+    }, 17000);
+  }, [])
+
   return (
     <div>
-      <Navbar />
+      
       {parcours?.map((parcours) => (
         <>
+        <Head>
+          <title>{parcours.metaTitle}</title>
+            <meta
+              name="description"
+              content={parcours.description} />
+            <meta name="keywords" content={parcours.tags} />
+        </Head>
+        <EmailForm trigger={timedPopup} setTrigger={setTimedPopup} />
+        <Navbar />
         <div className='parcours'>
 
           <div className='parcours-heading'>

@@ -1,14 +1,39 @@
 import React from 'react';
+import Head from 'next/head'
 
 import { client, urlFor } from '../lib/client';
 import { Navbar } from '../components';
 
+import EmailForm from '../components/EmailForm';
+import { useState, useEffect } from 'react';
+
 const apropos = ({ aPropos }) => {
+
+  const [timedPopup, setTimedPopup] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimedPopup(true);
+    }, 17000);
+  }, [])
+
   return (
     <div>
+      {aPropos?.map((aPropos) => (
+        <>
+        <Head>
+          <title>{aPropos.metaTitle}</title>
+            <meta
+              name="description"
+              content={aPropos.description} />
+            <meta name="keywords" content={aPropos.tags} />
+        </Head></>
+      ))}
+      <EmailForm trigger={timedPopup} setTrigger={setTimedPopup} />
       <Navbar />
 
       {aPropos?.map((aPropos) => (
+        
         <div className='apropos-wrapper'>
           <p className='apropos-subtitle'>QUI SUIS-JE ?</p>
           <h1 className='medium-title'>Je suis là pour vous aider à trouver <span className='medium-italic-title'l>le métier de vos rêves </span></h1>
