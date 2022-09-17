@@ -36,7 +36,7 @@ const index = ({ accueil }) => {
               <div>
                 <h1 className='bold-title'>{accueil.title}</h1>
                 <p>{accueil.paragraph}</p>
-                <Link href="/formation"><button style={{cursor: 'pointer', transition: '0.5s'}}>En savoir plus → </button></Link>  
+                <Link href='/formation'><button style={{cursor: 'pointer', transition: '0.5s'}}>En savoir plus → </button></Link>  
               </div> 
             </div>
             <div className={styles.accueil__img}>
