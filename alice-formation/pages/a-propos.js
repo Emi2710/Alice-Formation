@@ -27,12 +27,12 @@ const Apropos = ({ aPropos }) => {
               name="description"
               content={aPropos.description} />
             <meta name="keywords" content={aPropos.tags} />
-        </Head></>
-      ))}
+        </Head>
+      
       <EmailForm trigger={timedPopup} setTrigger={setTimedPopup} />
       <Navbar />
 
-      {aPropos?.map((aPropos) => (
+      
         
         <div className='apropos-wrapper'>
           <p className='apropos-subtitle'>QUI SUIS-JE ?</p>
@@ -57,7 +57,12 @@ const Apropos = ({ aPropos }) => {
           </div>
           
         </div>
+        </>
       ))}
+      
+   
+        
+  
 
       <style jsx>{`
 
