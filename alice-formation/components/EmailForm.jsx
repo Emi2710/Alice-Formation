@@ -65,8 +65,8 @@ const EmailForm = (props) => {
 }
 
 const renderAlert = () => (
-  <div className="px-4 py-3 leading-normal text-blue-700 bg-blue-100 rounded mb-5 text-center">
-    <p>Merci ! Votre demande a bien été prise en compte :)</p>
+  <div className="success-msg">
+    <p>Merci ! Votre demande a bien été prise en compte.</p>
   </div>
 )
 
