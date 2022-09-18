@@ -1,6 +1,6 @@
 import React from 'react';
 import { client, urlFor } from '../../lib/client';
-import { Navbar } from '../../components';
+import { Footer, Navbar } from '../../components';
 import {PortableText as BasePortableText} from '@portabletext/react';
 import Head from 'next/head'
 
@@ -148,6 +148,8 @@ const ArticleDetails = ({ articles, article }) => {
           }
         
         `}</style>
+
+        <Footer />
     </div>
     </>
     

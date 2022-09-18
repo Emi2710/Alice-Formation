@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from '../components';
+import { Footer, Navbar } from '../components';
 import { client, urlFor } from '../lib/client';
 import {PortableText as BasePortableText} from '@portabletext/react';
 import Head from 'next/head'
@@ -63,6 +63,8 @@ const Parcours = ({parcours}) => {
 
       
       `}</style>
+
+      <Footer />
     </div>
   )
 }

@@ -1,6 +1,9 @@
 .accueil__img img {
-    height: 50vh;
     margin-left: 20vw;
+    height: 40vh;
+}
+
+.accueil__img {
 }
 
 .accueil__container {

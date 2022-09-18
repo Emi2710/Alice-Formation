@@ -63,6 +63,7 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
             display: flex;
             align-items: center;
             margin-bottom:2rem;
+            padding: 1rem;
             
           }
           
@@ -77,7 +78,6 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
             background: var(--tag-color);
             color: var(--white);
             font-size: 14px;
-            max-width: 420px;
             border-radius: 12px;
           }
 

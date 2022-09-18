@@ -3,7 +3,7 @@ import styles from '../styles/Formation.module.css';
 import Head from 'next/head'
 
 import { client } from '../lib/client';
-import { Article, HeroBanner, Navbar } from '../components';
+import { Article, Footer, HeroBanner, Navbar } from '../components';
 
 const Formation = ({ articles, bannerData }) => {
   return (
@@ -26,6 +26,7 @@ const Formation = ({ articles, bannerData }) => {
     <div className={styles.formation__wrapper}>
       {articles?.map((article) => <Article key={article.slug} article={article} />)}
     </div>
+    <Footer />
     </div>
   )
 }

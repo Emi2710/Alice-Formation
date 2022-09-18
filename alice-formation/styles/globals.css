@@ -59,7 +59,7 @@ a {
   }
 
   .formation-article-img {
-    max-height: 180px;
+    max-height: 190px;
   }
 
   .app__navbar-links {
@@ -97,9 +97,6 @@ a {
   .formation-article-img {
     max-height: 220px;
   }
-
-
-  
 
 }
 
@@ -274,7 +271,6 @@ a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-left: 3rem;
   }
 
 .app__navbar-logo:hover,
@@ -313,7 +309,7 @@ FORMATION
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 20vw;
+  height: 35vh;
   margin-top: 25px;
   border-radius: 12px;
 }
@@ -443,4 +439,13 @@ POPUP STYLING HERE
 
 .close-tag:hover {
   cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 50%;
+  padding: 12px;
+  margin-top: 3rem;
 }

@@ -10,8 +10,7 @@ import Link from 'next/link';
 const Home = ({ accueil }) => {
   return (
     <>
-      
-
+    <Navbar />
       <div>
 
         
@@ -28,7 +27,7 @@ const Home = ({ accueil }) => {
           ))}
         
 
-        <Navbar />
+        
         {accueil?.map((accueil) => (
           <>
           <div className={styles.accueil__wrap}>

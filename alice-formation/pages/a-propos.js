@@ -1,13 +1,15 @@
 import React from 'react';
-import Head from 'next/head'
+import Head from 'next/head';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 import { client, urlFor } from '../lib/client';
-import { Navbar } from '../components';
+import { Article, Footer, Navbar } from '../components';
 
 import EmailForm from '../components/EmailForm';
 import { useState, useEffect } from 'react';
 
-const Apropos = ({ aPropos }) => {
+const Apropos = ({ aPropos, articles }) => {
 
   const [timedPopup, setTimedPopup] = useState(false);
 
@@ -71,7 +73,7 @@ const Apropos = ({ aPropos }) => {
           font-weight: 500;
         }
         .apropos-paragraph {
-          margin: 3rem 3rem 0 0;
+          margin-bottom: 3rem;
           opacity: 80%;
         }
 
@@ -82,6 +84,7 @@ const Apropos = ({ aPropos }) => {
 
         .apropos-wrapper hr {
           margin-top: 2rem;
+          margin-bottom: 2rem;
         }
 
         .apropos-wrapper h1 {
@@ -107,7 +110,10 @@ const Apropos = ({ aPropos }) => {
             height: auto;
             margin: 3rem;
           }
+
+        
       `}</style>
+      <Footer />
         
     </div>
    
@@ -118,8 +124,11 @@ export const getServerSideProps = async () => {
   const query = '*[_type == "aPropos"]';
   const aPropos = await client.fetch(query);
 
+  const articleFetch = '*[_type == "article"]';
+  const articles = await client.fetch(articleFetch);
+
   return {
-    props: { aPropos }
+    props: { aPropos, articles }
   }
 
 }

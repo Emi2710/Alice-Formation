@@ -10,15 +10,16 @@ const HeroBanner = ({ heroBanner, styles }) => {
             <p className='formation_banner_subtitle'>Les formations</p>
             <h1 className='bold-title'>{heroBanner.title}</h1>
             <div className='display-flex'>
-                {['Business en ligne', 'Réseaux sociaux', 'Productivité', 'Remote', 'Manuel'].map((item, index) => (
+              
+               {['Business en ligne', 'Réseaux sociaux', 'Productivité', 'Remote', 'Manuel'].map((item, index) => (
                 <div  
                   key={index}
-                  onClick={() => handleFilter(item)}
                   className='tag'
                 >
                   {item}
                 </div>
               ))}
+             
             </div>
         
             
@@ -51,14 +52,13 @@ const HeroBanner = ({ heroBanner, styles }) => {
             
             
             .tag {
-              margin: 0.5rem 1rem ;
-              padding: 0.3rem 0 0.3rem 0;
+              margin: 0.3rem 0.3rem;
+              padding: 0.3rem 0.5rem;
               background: var(--tag-color);
               color: var(--white);
               font-size: 14px;
               border-radius: 12px;
-              min-width: 120px;
-          
+              min-width: 115px;
             }
 
             

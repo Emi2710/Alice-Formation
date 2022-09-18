@@ -20,6 +20,17 @@ export default {
             group: 'principal',
         },
         {
+            name: 'tagCont', 
+            title: 'Tags', 
+            type: 'array', 
+            of: [{ 
+                name: 'tagText', 
+                title: 'Tag', 
+                type: 'string' 
+            }],
+            group: 'principal'
+        },
+        {
             name: 'metaTitle',
             title: 'Titre SEO',
             type: 'string',
