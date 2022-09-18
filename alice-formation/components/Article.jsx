@@ -45,14 +45,12 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
             background-size: cover;
             height: 38vh;
             width: 35vw;
-            min-width: 200px;
+            min-width: 160px;
             border-radius: 12px;
-            margin-left: 0.5rem;
           }
           
           .formation-article-img img {
             border-radius: 15px;
-            padding: 0.5rem;
             height: 220px;
           }
           .formation-article {
@@ -63,7 +61,7 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
             display: flex;
             align-items: center;
             margin-bottom:2rem;
-            padding: 1rem;
+            padding: 0.8rem;
             
           }
           
@@ -73,7 +71,7 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
           }
           
           .tag {
-            margin-right: 1rem;
+            margin-right: 0.5rem;
             padding: 0.3rem 0.8rem;
             background: var(--tag-color);
             color: var(--white);
