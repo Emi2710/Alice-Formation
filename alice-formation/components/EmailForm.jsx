@@ -13,7 +13,7 @@ const EmailForm = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.send('service_fq9jnhe', 'template_x7vo589', values, '5b9bAIL0A5mOkqh1a')
+    emailjs.send('service_b5u331l', 'template_4rolrge', values, 'muinY_WppOTlc3R1T')
       .then(response => {
         console.log('SUCCESS!', response);
         setValues({
