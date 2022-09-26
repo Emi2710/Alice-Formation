@@ -3,7 +3,7 @@ import React from 'react'
 const mentions = () => {
   return (
     <div>
-        <h2>CONDITIONS D'UTILISATION</h2>
+        <h2>CONDITIONS UTILISATION</h2>
         <p>L’utilisation du présent site implique l’acceptation pleine et entière des conditions
             générales d’utilisation décrites ci-après. Ces conditions d’utilisation sont susceptibles
             d’être modifiées ou complétées à tout moment.
