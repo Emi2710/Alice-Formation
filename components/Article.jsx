@@ -23,8 +23,8 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
                   </div>
 
                   <div className='formation-article-container'>
-                    <h2 className='bold-title'>{titre}</h2>
-                    <p>{preview}</p>
+                    <h2 className='bold-title h2'>{titre}</h2>
+                    <p className='preview'>{preview}</p>
                   </div>  
                 </div>
 
@@ -83,6 +83,8 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
             font-size: 14px;
             opacity: 75%;
           }
+
+          
 
         
         `}</style>
