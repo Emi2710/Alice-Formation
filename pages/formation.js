@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/Formation.module.css';
 import Head from 'next/head'
 import categories from '../components/categories';
@@ -7,6 +7,21 @@ import { client } from '../lib/client';
 import { Article, Footer, HeroBanner, Navbar } from '../components';
 
 const Formation = ({ articles, bannerData }) => {
+
+  const [activeFilter, setActiveFilter] = useState('');
+  const [filterItem, setFilterItem] = useState([]);
+
+  const handleFilter = (item) => {
+      setActiveFilter(item);
+
+      if(item ==='Tout') {
+        setFilterItem(articles);
+      } else {
+        setFilterItem(articles.filter((article) =>article.tags.includes(item)))
+      }
+  }
+
+
   return (
     <div>
       {bannerData?.map((formation) => (
@@ -27,14 +42,18 @@ const Formation = ({ articles, bannerData }) => {
     <div>
       <div className='display-flex'>
        {categories.map((item, index) => (
-                <div key={index} className="tag">
+                <div 
+                  key={index} 
+                  className="tag"
+                  onClick={() => handleFilter(item)}
+                >
                   {item}
                 </div>
               ))} 
       </div>
        
         <div className={styles.formation__wrapper}>
-          {articles?.map((article) => <Article key={article.slug} article={article} />)}
+          {filterItem?.map((article) => <Article key={article.slug} article={article} />)}
         </div>
       
     </div>
