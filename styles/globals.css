@@ -18,6 +18,8 @@ body {
   color: var(--black);
 }
 
+
+
 a {
   color: inherit;
 }
@@ -46,7 +48,7 @@ a {
 
 @media screen and (min-width: 320px) {
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .quoting {
@@ -75,6 +77,11 @@ a {
     max-width: 370px;
   }
 
+  .article-container {
+    width: 90%;
+  }
+  
+
 }
 
 @media screen and (min-width: 700px) {
@@ -96,6 +103,10 @@ a {
 
   .formation-article-img {
     max-height: 220px;
+  }
+
+  .article-container {
+    width: 80%;
   }
 
 }
@@ -448,4 +459,13 @@ POPUP STYLING HERE
   opacity: 50%;
   padding: 12px;
   margin-top: 3rem;
+}
+
+.article-container {
+  line-height: 23px;
+}
+
+.article-container ul li {
+  opacity: 80%;
+  margin-bottom: 12px;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles/Formation.module.css';
 import Head from 'next/head'
+import categories from '../components/categories';
 
 import { client } from '../lib/client';
 import { Article, Footer, HeroBanner, Navbar } from '../components';
@@ -23,10 +24,47 @@ const Formation = ({ articles, bannerData }) => {
     <Navbar />
     <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
 
-    <div className={styles.formation__wrapper}>
-      {articles?.map((article) => <Article key={article.slug} article={article} />)}
+    <div>
+      <div className='display-flex'>
+       {categories.map((item, index) => (
+                <div key={index} className="tag">
+                  {item}
+                </div>
+              ))} 
+      </div>
+       
+        <div className={styles.formation__wrapper}>
+          {articles?.map((article) => <Article key={article.slug} article={article} />)}
+        </div>
+      
     </div>
     <Footer />
+
+    <style jsx>
+          {`
+            .display-flex {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              margin: 1.5rem 0 3.5rem 0;
+              text-align: center;
+              
+            }
+            
+            .tag {
+              margin: 0.3rem 0.3rem;
+              padding: 0.3rem 0.5rem;
+              background: var(--tag-color);
+              color: var(--white);
+              font-size: 14px;
+              border-radius: 12px;
+              min-width: 115px;
+            }
+
+            
+
+
+          `}</style>
     </div>
   )
 }

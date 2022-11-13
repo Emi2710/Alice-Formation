@@ -1,4 +1,5 @@
 import React from 'react'
+import categories from './categories'
 
 const HeroBanner = ({ heroBanner, styles }) => {
   
@@ -11,14 +12,8 @@ const HeroBanner = ({ heroBanner, styles }) => {
             <h1 className='bold-title'>{heroBanner.title}</h1>
             <div className='display-flex'>
               
-               {['Business en ligne', 'Réseaux sociaux', 'Productivité', 'Remote', 'Manuel'].map((item, index) => (
-                <div  
-                  key={index}
-                  className='tag'
-                >
-                  {item}
-                </div>
-              ))}
+               
+              
              
             </div>
         
@@ -45,7 +40,7 @@ const HeroBanner = ({ heroBanner, styles }) => {
               display: flex;
               flex-wrap: wrap;
               justify-content: center;
-              margin: 1.5rem 0 3.5rem 0;
+              margin-top: 1.5rem;
               
             }
             

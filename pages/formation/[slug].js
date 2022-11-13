@@ -114,9 +114,13 @@ const ArticleDetails = ({ articles, article }) => {
             opacity: 80%;
           }
 
+          .article-container div ul li{
+            opacity: 80%;
+          }
+
           .article-container {
             padding: 15px;
-            width: 80%;
+            
             margin: 1rem auto 3rem auto;
           }
 
