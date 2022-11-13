@@ -8,8 +8,8 @@ import { Article, Footer, HeroBanner, Navbar } from '../components';
 
 const Formation = ({ articles, bannerData }) => {
 
-  const [activeFilter, setActiveFilter] = useState('');
-  const [filterItem, setFilterItem] = useState([]);
+  const [activeFilter, setActiveFilter] = useState('Tout');
+  const [filterItem, setFilterItem] = useState(articles);
 
   const handleFilter = (item) => {
       setActiveFilter(item);
@@ -18,7 +18,7 @@ const Formation = ({ articles, bannerData }) => {
         setFilterItem(articles);
       } else {
         setFilterItem(articles.filter((article) =>article.tags.includes(item)))
-      }
+      } 
   }
 
 
@@ -78,7 +78,14 @@ const Formation = ({ articles, bannerData }) => {
               font-size: 14px;
               border-radius: 12px;
               min-width: 115px;
+              cursor: pointer;
             }
+
+            .tag:hover {
+              cursor: pointer;
+            }
+
+            
 
             
 
