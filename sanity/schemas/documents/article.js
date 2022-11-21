@@ -23,24 +23,7 @@ export default {
         {name: 'lecture', title: 'Temps de lecture', type: 'string', group: 'principal'},
         {name: 'image1', title: 'Première image', type: 'image', group: 'principal'},
         {name: 'preview', title: 'Preview', type: 'string', group: 'principal'},
-        {
-            name: 'slug',
-            title: 'Slug',
-            type: 'slug',
-            group: 'principal',
-
-            options: {
-                source: 'name',
-                slugify: (input) =>
-                input
-                    .toLowerCase()
-                    //Remove spaces
-                    .replace(/\s+/g, "-")
-                    //Remove special characters
-                    .replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ""),
-                validation: (Rule) => Rule.required(),
-            },
-            },
+        {name: 'slug', title: 'Slug', type: 'slug', options: {source: 'name', maxLength: 90,}, group: 'principal'},
         {name: 'tags', title: 'Tags', type: 'array', of: [{ name: 'tag', title: 'Tag', type: 'string' }],group: 'principal'},
 
         {
