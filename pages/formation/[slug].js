@@ -77,7 +77,7 @@ function ArticleDetails ({ articles, article }) {
         <BasePortableText value={contentBody} />
         {images?.map((image) => (
           <div>
-              <a href={image.link} target="_blank">
+              <a href={image.link} target="_blank" rel="noreferrer">
                 <img src={urlFor(image)} alt={image.alt} className="img-responsive"/> 
               </a>
               <p>{image.caption}</p>   
