@@ -2,12 +2,19 @@ import React from 'react';
 import { client, urlFor } from '../../lib/client';
 import { Footer, Navbar } from '../../components';
 import {PortableText as BasePortableText} from '@portabletext/react';
-import Head from 'next/head'
+import Head from 'next/head';
+
 
 import EmailForm from '../../components/EmailForm';
 import { useState, useEffect } from 'react';
 
-const ArticleDetails = ({ articles, article }) => {
+
+
+
+function ArticleDetails ({ articles, article }) {
+
+  
+
   const [timedPopup, setTimedPopup] = useState(false);
 
   useEffect(() => {
@@ -26,7 +33,10 @@ const ArticleDetails = ({ articles, article }) => {
             metaTitle,
             description,
             tagsSeo,
+            images
            } = article;
+    
+  
 
   return (
     <>
@@ -65,6 +75,16 @@ const ArticleDetails = ({ articles, article }) => {
       </div>
       <div className='article-container'>
         <BasePortableText value={contentBody} />
+        {images?.map((image) => (
+          <div>
+              <a href={image.link} target="_blank">
+                <img src={urlFor(image)} alt={image.alt} className="img-responsive"/> 
+              </a>
+              <p>{image.caption}</p>   
+            
+            
+          </div>
+        ))}
       </div>
         
         <style jsx>{`
@@ -149,6 +169,11 @@ const ArticleDetails = ({ articles, article }) => {
             content: '';
             background: rgba(22, 22, 22, 0.5);
             height: 2px;
+          }
+
+          .img-responsive {
+            max-width: 100%;
+            max-height: 100%;
           }
         
         `}</style>

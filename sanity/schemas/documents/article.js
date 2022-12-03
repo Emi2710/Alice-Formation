@@ -28,7 +28,7 @@ export default {
         title: 'Slug',
         type: 'slug',
         options: {
-            source: 'name',
+            source: 'titre',
             slugify: (input) =>
             input
                 .toLowerCase()
@@ -60,6 +60,33 @@ export default {
             group: 'content',
             type: 'blockContent'
         },
+        {   name: 'images', 
+            title: 'Ajouter des images', 
+            group: 'content',
+            type: 'array',
+            of: [{
+                type: 'mainImage'
+            }] ,
+            options: {
+            hotspot: true,  
+            },    
+        },
+        /*{   name: 'siteUrl', 
+            title: 'Lien vers le site', 
+            type: 'string',
+            group: 'principal'
+        },
+        {   name: 'imgReview', 
+            title: 'Témoignages', 
+            type: 'array',
+            of: [{
+                type: 'image'
+            }] ,
+            options: {
+            hotspot: true,  
+        },
+            group: 'principal'
+        },*/
         {
             name: 'metaTitle',
             title: 'Titre SEO',

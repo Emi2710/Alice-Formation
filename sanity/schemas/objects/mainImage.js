@@ -15,6 +15,14 @@ export default {
       },
     },
     {
+      name: "link",
+      type: "string",
+      title: "Ajouter un lien",
+      options: {
+        isHighlighted: true,
+      },
+    },
+    {
       name: "alt",
       type: "string",
       title: "Alternative text",

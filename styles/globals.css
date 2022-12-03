@@ -86,7 +86,11 @@ a {
   }
 
   .h2 {
-    font-size: 1.2em;
+    font-size: 1em;
+  }
+
+  .lecture {
+    font-size: 12px;
   }
   
 
@@ -123,6 +127,10 @@ a {
 
   .h2 {
     font-size: 1.5em;
+  }
+
+  .lecture {
+    font-size: 14px;
   }
 
 }

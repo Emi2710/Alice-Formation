@@ -80,7 +80,6 @@ const Article = ({ article: { slug, image1, preview, tags, lecture, titre} }) =>
           }
 
           .lecture {
-            font-size: 14px;
             opacity: 75%;
           }
 
