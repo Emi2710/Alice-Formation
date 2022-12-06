@@ -502,4 +502,11 @@ POPUP STYLING HERE
   margin-bottom: 12px;
 }
 
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.flex-wrap div {
+  margin: 12px;
+}

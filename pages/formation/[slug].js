@@ -75,16 +75,21 @@ function ArticleDetails ({ articles, article }) {
       </div>
       <div className='article-container'>
         <BasePortableText value={contentBody} />
-        {images?.map((image) => (
-          <div key={image}>
-              <a href={image.link} target="_blank" rel="noreferrer">
-                <img src={urlFor(image)} alt={image.alt} className="img-responsive"/> 
-              </a>
-              <p>{image.caption}</p>   
+        <div className='flex-wrap'>
+          {images?.map((image) => (
+            
+              <div key={image}>
+                <a href={image.link} target="_blank" rel="noreferrer">
+                  <img src={urlFor(image)} alt={image.alt} className="img-responsive"/> 
+                </a>
+                <p>{image.caption}</p>   
+              
+              
+              </div>
             
             
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
         
         <style jsx>{`
