@@ -54,7 +54,7 @@ const Home = ({ accueil }) => {
           </div>
           <div className={styles.section_calltoaction}>
             <BasePortableText value={accueil.callToAction} />
-            <button onClick={() => setButtonPopup(true)} style={{cursor: 'pointer', transition: '0.5s'}}>Suivre la newsletter </button>
+            <button style={{cursor: 'pointer', transition: '0.5s'}}>Suivre la newsletter </button>
           </div> 
           <div className={styles.section_general}>
             <BasePortableText value={accueil.section} />
