@@ -6,12 +6,22 @@ import { client, urlFor } from '../lib/client';
 import { Navbar } from '../components';
 import Link from 'next/link';
 
+import {PortableText as BasePortableText} from '@portabletext/react';
+
+import NewsletterForm from '../components/NewsletterForm';
+import { useState } from 'react';
+
+
 
 const Home = ({ accueil }) => {
+
+  const [buttonPopup, setButtonPopup] = useState(false);
+
   return (
     <>
+    <NewsletterForm trigger={buttonPopup} setTrigger={setButtonPopup} />
     <Navbar />
-      <div>
+      <div className={styles.accueil}>
 
         
           {accueil?.map((accueil) => (
@@ -40,7 +50,27 @@ const Home = ({ accueil }) => {
             </div>
             <div className={styles.accueil__img}>
               <img src={urlFor(accueil.imgUrl)} align='bottom' alt="Image vectorisée Alice" />
-            </div>  
+            </div> 
+          </div>
+          <div className={styles.section_calltoaction}>
+            <BasePortableText value={accueil.callToAction} />
+            <button onClick={() => setButtonPopup(true)} style={{cursor: 'pointer', transition: '0.5s'}}>S'inscrire à la newsletter </button>
+          </div> 
+          <div className={styles.section_general}>
+            <BasePortableText value={accueil.section} />
+            <div className='flex-wrap accueil_section_images'>
+              {accueil.images?.map((image) => (
+                
+                  <div key={image}>
+                    <a href={image.link} target="_blank" rel="noreferrer">
+                      <img src={urlFor(image)} alt={image.alt} className="img-responsive"/> 
+                    </a>
+                    <p>{image.caption}</p>   
+                  
+                  </div>
+                
+              ))}
+            </div>
           </div>
           
           </>

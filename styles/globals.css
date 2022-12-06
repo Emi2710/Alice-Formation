@@ -29,6 +29,8 @@ a {
   margin: 0;
 }
 
+
+
 .bold-title {
   font-family: var(--title-font);
   font-weight: 600;
@@ -505,8 +507,11 @@ POPUP STYLING HERE
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
 }
 
 .flex-wrap div {
   margin: 12px;
 }
+

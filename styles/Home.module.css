@@ -1,3 +1,12 @@
+.accueil h1, .accueil h2, .accueil h3, .accueil h4 {
+    font-family: var(--title-font);
+}
+
+.accueil p {
+    margin-top: 25px;
+    opacity: 80%;
+}
+
 .accueil__img img {
     margin-left: 20vw;
     height: 44vh;
@@ -31,6 +40,16 @@
         height: 60vh;
         margin: 40vh 2rem 0 0;
     }
+
+    .section_calltoaction p {
+        width: 80%;
+        margin: auto;
+    }
+    
+    .section_general p {
+        width: 80%;
+        margin: auto;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -54,4 +73,35 @@
     .accueil__container {
         max-width: 500px;
     }
+}
+
+.section_calltoaction {
+    background-color: #F0D9C1;
+    text-align: center;
+    padding: 50px 25px;
+    
+}
+
+.section_calltoaction p {
+    margin-top: 25px;
+}
+
+.section_calltoaction button {
+    background: var(--button-color);
+    padding: 1rem;
+    border: none;
+    border-radius: 18px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 1.5rem;
+}
+
+.section_general {
+    text-align: center;
+    padding: 50px 25px;
+}
+
+.section_general p {
+    margin-top: 25px;
 }
