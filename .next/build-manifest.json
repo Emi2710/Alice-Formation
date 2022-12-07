@@ -30,10 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/formation/[slug]": [
+    "/formation": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/formation/[slug].js"
+      "static/chunks/pages/formation.js"
     ]
   },
   "ampFirstPages": []
