@@ -3,7 +3,7 @@ const InputField = (props) => {
   return (
     <div>
       <label className="" htmlFor={name}>{label}</label>
-      <input className="" type={type} onChange={handleChange} value={value} name={name} placeholder={placeholder} required />
+      <input className="email-input" type={type} onChange={handleChange} value={value} name={name} placeholder={placeholder} required />
     </div>
   )
 }

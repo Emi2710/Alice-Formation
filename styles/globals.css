@@ -517,3 +517,16 @@ POPUP STYLING HERE
   margin: 12px;
 }
 
+.email-input {
+  padding: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border:1px solid rgba(102, 97, 97, 0.616);
+}
+
+.calltoaction-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+}

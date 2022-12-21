@@ -99,14 +99,20 @@
 }
 
 .section_calltoaction button {
-    background: var(--button-color);
-    padding: 1rem;
+    background: #ee5757;
+    padding: 7px 14px;
     border: none;
-    border-radius: 18px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
     color: #fff;
     font-weight: 600;
     letter-spacing: 0.5px;
-    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.section_calltoaction button:hover {
+    background: #ca4141;
 }
 
 .section_general {
