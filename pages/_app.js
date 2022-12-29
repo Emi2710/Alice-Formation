@@ -7,7 +7,7 @@ import '../styles/globals.css';
 function MyApp({ Component, pageProps }) {
   return (
     <>
-    <Script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/26686180.js"></Script>
+    <Script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/26749867.js" />
     <Component {...pageProps} />
     </>
     
