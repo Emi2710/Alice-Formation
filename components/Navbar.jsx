@@ -21,6 +21,7 @@ const Navbar = () => {
               <Link href='/a-propos'><li>À propos</li></Link>
               <Link href='/formation'><li>Formations</li></Link>
               <Link href='/parcours'><li>Mon parcours</li></Link>
+              <Link href='/blog'><li>Blog</li></Link>
             </ul>
           </div>
         </div>
@@ -35,6 +36,7 @@ const Navbar = () => {
               <Link href='/a-propos'><li>À propos</li></Link>
               <Link href='/formation'><li>Formations</li></Link>
               <Link href='/parcours'><li>Mon parcours</li></Link>
+              <Link href='/blog'><li>Blog</li></Link>
           </ul>  
         </div>
 

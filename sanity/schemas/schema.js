@@ -10,6 +10,7 @@ import parcours from './documents/parcours';
 import blockContent from './objects/blockContent';
 import articleContent from './objects/articleContent';
 import mainImage from './objects/mainImage';
+import blog from './documents/blog';
 
 export default createSchema({
   name: 'default',
@@ -21,6 +22,7 @@ export default createSchema({
     parcours,
     blockContent,
     articleContent,
-    mainImage
+    mainImage,
+    blog
   ]),
 })
