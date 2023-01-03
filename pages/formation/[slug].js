@@ -33,7 +33,8 @@ function ArticleDetails ({ articles, article }) {
             metaTitle,
             description,
             tagsSeo,
-            images
+            images,
+            bannerImg
            } = article;
     
   
@@ -72,6 +73,16 @@ function ArticleDetails ({ articles, article }) {
         ))}
         
         
+      </div>
+      <div className='article_banner_img'>
+        {bannerImg &&
+                <div>
+                  <a href={bannerImg.link}  target="_blank" rel="noreferrer">
+                    <img src={urlFor(bannerImg)} alt={bannerImg.alt} className='banner_img' />
+                    <p className='banner_caption'>{bannerImg.caption}</p>  
+                  </a>
+                </div>
+              }
       </div>
       <div className='article-container'>
         <BasePortableText value={contentBody} />

@@ -49,7 +49,12 @@ const Apropos = ({ aPropos, articles }) => {
                 
                 </>
               ))}   
-              <img src={urlFor(aPropos.signature)} alt='signature' className='signature' /> 
+              {aPropos.signature &&
+                <>
+                  <img src={urlFor(aPropos.signature)} alt='signature' className='signature' />
+                </>
+              }
+               
 
             </div>
             <div className='illustration' style={{backgroundImage: `url(${urlFor(aPropos.imgUrl)})`}}>

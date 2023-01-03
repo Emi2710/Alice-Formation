@@ -54,6 +54,10 @@ export default {
                 }
             ]
         },
+        {   name: 'bannerImg', 
+            title: 'Bannière', 
+            type: 'mainImage', 
+            group: 'principal'},
         {
             name: 'contentBody',
             title: 'Content',

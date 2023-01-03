@@ -530,3 +530,17 @@ POPUP STYLING HERE
   align-items: center;
   padding-top: 16px;
 }
+
+.banner_img {
+  max-width: 100%;
+  padding: 25px 0;
+}
+
+.article_banner_img {
+  display: flex;
+  justify-content: center;
+}
+
+.article_banner_img a {
+  opacity: 80%;
+}
