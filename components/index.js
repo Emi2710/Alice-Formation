@@ -4,5 +4,3 @@ export { default as Navbar } from './Navbar';
 export { default as EmailForm } from './EmailForm';
 export { default as Footer } from './Footer';
 export { default as NewsletterForm } from './NewsletterForm';
-export { default as BlogPreview } from './BlogPreview';
-export { default as BlogBanner } from './BlogBanner';

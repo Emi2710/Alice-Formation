@@ -3,7 +3,9 @@ import styles from '../styles/Formation.module.css';
 import Head from 'next/head'
 //import categories from '../components/categories';
 
-import { client } from '../lib/client';
+import { client, urlFor } from '../lib/client';
+import {PortableText as BasePortableText} from '@portabletext/react';
+
 import { BlogBanner, BlogPreview, Footer, HeroBanner, Navbar } from '../components';
 
 const Blog = ({ blogs, bannerData }) => {
@@ -30,22 +32,63 @@ const Blog = ({ blogs, bannerData }) => {
     
     <Navbar />
 
-    <BlogBanner />
     <div>
-      <div className='display-flex'>
-       {/*categories.map((item, index) => (
-                <div 
-                  key={index} 
-                  className="tag"
-                  onClick={() => handleFilter(item)}
-                >
-                  {item}
-                </div>
-       ))*/} 
-      </div>
+      
        
-        <div className={styles.formation__wrapper}>
-          {blogs?.map((blog) => <BlogPreview key={blog.slug} blog={blog} />)}
+    <div>
+    {blogs?.map((blog) => <>
+            
+      <div className='article-heading'>
+        <div className='article-heading-content'>
+          <p className='date'>{blog.date}</p>
+          <h1 className='bold-title'>{blog.titre}</h1>
+          <div className='article-display-flex'>
+              <p className='article-tag'>{blog.tags}</p>
+              <p className='article-lecture'>{blog.lecture}</p>
+          </div>  
+        </div>
+        
+        <div className='article-mainImage' style={{backgroundImage:`url(${urlFor(blog.image1)})`}}></div>
+      </div>
+      
+      <div className='sommaire'>
+        {blog.sommaire?.map((sommaireTitle) => (
+          <>
+            <p>{sommaireTitle}</p>  
+          </>
+        ))}
+        
+        
+      </div>
+      <div className='article_banner_img'>
+        {blog.bannerImg &&
+                <div>
+                  <a href={blog.bannerImg.link}  target="_blank" rel="noreferrer">
+                    <img src={urlFor(blog.bannerImg)} alt={blog.bannerImg.alt} className='banner_img' />
+                    <p className='banner_caption'>{blog.bannerImg.caption}</p>  
+                  </a>
+                </div>
+              }
+      </div>
+      <div className='article-container'>
+        <BasePortableText value={blog.contentBody} />
+        <div className='flex-wrap'>
+          {blog.images?.map((image) => (
+            
+              <div key={image}>
+                <a href={image.link} target="_blank" rel="noreferrer">
+                  <img src={urlFor(image)} alt={image.alt} className="img-responsive"/> 
+                </a>
+                <p>{image.caption}</p>   
+              
+              
+              </div>
+            
+            
+          ))}
+        </div>
+      </div>
+          </>)}
         </div>
       
     </div>
@@ -53,14 +96,7 @@ const Blog = ({ blogs, bannerData }) => {
 
     <style jsx>
           {`
-            .display-flex {
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: center;
-              margin: 1.5rem 0 3.5rem 0;
-              text-align: center;
-              
-            }
+            
             
             .tag {
               margin: 0.3rem 0.3rem;
@@ -76,6 +112,93 @@ const Blog = ({ blogs, bannerData }) => {
             .tag:hover {
               cursor: pointer;
             }
+
+            .date{
+            font-weight: 500;
+            opacity: 50%;
+          }
+
+          .article-tag {
+            background-color: #41383A;
+            width: 25%;
+            color: #fff;
+            text-align: center;
+            border-radius: 15px;
+            font-size: 16px;
+            padding: 2px;
+          }
+
+          .article-heading-content {
+            max-width: 650px;
+            margin: 5rem auto 1rem auto;
+            padding: 15px;
+          }
+
+          .article-mainImage {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 50vh;
+          }
+
+          .article-display-flex {
+            display:flex;
+            align-items: center;
+          }
+
+          .article-lecture {
+            margin-left: 15px;
+            opacity: 75%;
+            font-size: 16px;
+          }
+
+          .article-container div p{
+            margin-top: 25px;
+            opacity: 80%;
+          }
+
+          .article-container div ul li{
+            opacity: 80%;
+          }
+
+          .article-container {
+            padding: 15px;
+            
+            margin: 1rem auto 3rem auto;
+          }
+
+          .article-container img {
+            margin-top: 25px;
+          }
+
+
+          .sommaire {
+            margin: 3rem auto 0 auto;
+            width: 76%;
+            opacity: 50%;
+          }
+
+          .sommaire p {
+            margin-bottom: 8px;
+            position: relative;
+          }
+
+          .sommaire p::before {
+            position: absolute;
+            left: -28px;
+            bottom: 10px;
+            margin: auto;
+            width: 2%;
+            content: '';
+            background: rgba(22, 22, 22, 0.5);
+            height: 2px;
+          }
+
+          .img-responsive {
+            max-width: 100%;
+            max-height: 100%;
+          }
 
             
 
